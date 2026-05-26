@@ -1,7 +1,10 @@
 import { FileText, Brain, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-slate-950 text-white">
 
@@ -44,7 +47,7 @@ function Home() {
         </p>
 
         <div className="flex gap-4 mt-10">
-          <button className="px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-semibold transition">
+          <button onClick={() => navigate("/dashboard")} className="px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-semibold transition cursor-pointer">
             Upload Resume
           </button>
 
